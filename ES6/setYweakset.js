@@ -1,0 +1,13 @@
+const set1 = new Set([1,1,'1',2,'palabra1',44,'una frase',3])
+console.log('set1: ',set1)
+console.log('set1.size: '+set1.size)
+console.log('set1.has("palabra1"): '+set1.has('palabra1'))
+console.log('set1.add("hola mundo"): '+JSON.stringify(set1.add('hola mundo')))
+console.log('set1.add({name:"carlos",edad:88}): '+JSON.stringify(set1.add({name:'carlos',edad:88})))
+console.log('set1: ',set1)
+console.log('set1.delete("palabra1"): '+set1.delete('palabra1'))
+console.log('set1.delete("1"): '+set1.delete('1'))
+console.log('set1: ',set1)
+
+const vec2 = Array.from(set1)
+console.log('vec2: ',vec2)
