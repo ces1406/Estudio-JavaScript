@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Documento html de prueba para javascript</title>
+  <link rel="stylesheet" href="index.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<body style="background-color: rgb(27, 25, 36);">
+
+  <header>
+    <div class="container" id="tituloId">
+      <h1>Titulo de la página</h1>
+    </div>
+    <div class="container">
+      <div class="sector">
+        <h4>Sector A</h4>
+      </div>      
+      <div class="sector">
+        <h4>Sector B</h4>
+      </div>
+      <div class="sector">
+        <h4>Sector C</h4>
+      </div>
+    </div>  
+    <div>
+    <button onclick="console.log('me hicieron click')">Evento mediante atributo(on line)</button><br/>
+    <button onclick="botonPresionado1()">Evento mediante atributo(en archivo externo)</button><br/>
+    <button id="idBotonSemantico">Evento con manejador semantico</button><br/>
+    <button id="idBoton4">Evento multiples manejadores</button><br/>
+    <br/>
+    <br/>
+    <section class="eventos-flujo">
+     <div class="flujo-eventos" id="idDivPropagacion1">
+        1
+        <div class="flujo-eventos" id="idDivPropagacion2">
+          2
+          <div class="flujo-eventos" id="idDivPropagacion3">
+            3<br/><br/>
+            <divbutton id="idBtn">Evento multiples manejadores</button><br/>
+          </div>
+        </div>
+      </div>    
+    </section>
+    </div>
+  </header>  
+  
+  <section>
+    <form action="#" class="elemento" id="formulario1" method="POST">
+      <h3>Formulario 1</h3>
+      <fieldset class="elemento" id="personalDataId" style="padding:1ex 2ex 2ex 2ex;">
+        <legend>Datos Personales</legend>
+        Nombre<input type="text" name="nombre"/><br/>
+        Apellido<input type="text" name="apellido"/><br/>
+        Edad<input type="number" name="edad"/>
+      </fieldset>
+      <fieldset class="elemento">
+        <legend>Domicilio</legend>
+        Calle<input type="text" name="calle"/><br/>
+        Nro<input type="number" name="numero"/>
+      </fieldset>
+      <input type="submit" value="Submitear"></input>
+    </form>
+  </section>
+
+  <section class="container" id="listas">
+    <div >
+      <h5 class="elemento">Lista 1</h5>
+      <ul class="elemento" id="lista1">
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+        <li>Item D</li>
+      </ul>
+    </div>
+    <div >
+      <h5 class="elemento">Lista 2</h5>
+      <ul class="elemento" id ="lista2">
+        <li><a>Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+    <div class="item" >
+      <h5 class="elemento">Lista 3</h5>
+      <ul class="elemento" id="lista3">
+        <li><a>Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+        <li><a>Link 4</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <aside>
+    <div>
+      <table class="elemento" id="tabla1">
+        <tr>
+          <td>Columna 1</td>
+          <td>Columna 2</td>
+          <td>Columna 3</td>
+        </tr>
+        <tr>
+          <td>Data11</td>
+          <td>Data12</td>
+          <td>Data13</td>
+        </tr>
+        <tr>
+          <td>Data21</td>
+          <td>Data22</td>
+          <td>Data23</td>
+        </tr>
+      </table>
+    </div>
+  </aside>
+
+  <footer class="elemento container">
+    <div class="card-group">
+      <div class="card">
+        <img class="card-img-top" src="hermes.jpg" width="150" height="350"/>
+        <div class="card-body">
+          <h4 class="card-title">Titulo</h4>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="gattt.jpeg" width="150" height="350" />
+        <div class="card-body">
+          <h4 class="card-title">Otro titulo</h4>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    //let texto = "irma carolina androvic"
+    //let texto = "esa de vamos a la playa"
+    //const hablar = (t) => speechSynthesis.speak(new SpeechSynthesisUtterance(t))
+    //hablar(texto)
+    /*console.log(document.doctype)
+    console.log(document.URL)
+    console.log(document.domain)*/
+  </script>
+  <!--script src="./promesas/4-conAsyncAwait.js"></script-->
+  <script src="./DOM/eventos.js"></script>
+</body>
+
+</html>
