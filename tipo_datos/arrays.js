@@ -72,8 +72,8 @@ console.log('unArray: ',unArray)
 console.log("\x1b[35m%s\x1b[0m", '-----------------------------var unArray = array.slice(posInicio,posFinal)-------------------------------')
 let array3 = array2.slice();
 console.log('array3 = array2.slice() : ',array3)
-console.log('array3.slice(1): ',array3.slice(1))
-
+console.log('array2.slice(2,3): ',array2.splice(2,1))
+console.log('array2(LUEGO DE->splice(2,1)): ',array2)
 
 
 //-------------------------------------------array.reverse()-----------------------------------------------
@@ -133,13 +133,21 @@ console.log('array5: ',array5)
 //--------------------------------unArray = array.reduce(function)-----------------------------------------
 //-----------------Itera sobre cada elemento del arrray reduciendolo a un solo valor-----------------------
 //-------------------NO devuelve un array sino la iteracion sobre el ultimo elemento-----------------------
-console.log("\x1b[35m%s\x1b[0m", '--------------------------------unArray = array.reduce(function)-----------------------------------------')
+console.log("\x1b[35m%s\x1b[0m", '---------------------unArray = array.reduce(function)->reduce a un único valor--------------------------')
 console.log('array2: ',array2)
-array6 = array2.reduce((acumulador,valorActual,indice,valorInicial)=>{
+console.log('-----------------------------------')
+arrayReducidoAUnElemento = array2.reduce((acumulador,valorActual,indice,valorInicial)=>{
     //acumulador acumula el valor devuelto en la iteracion anterior (o el valorInicial en la primera iteracion)
-    //valor actual es ele elemento actual
+    //valor actual es el elemento actual
     //indice->idem(obvio)
     //valor inicial->un valor inicial o semilla
-    return (valorActual.name+'--'+valorActual.edad+' (pos:'+indice+')')
+    //acumulador += valorActual.edad
+    console.log('acumulador: ',acumulador);
+    console.log('valorAcutal: ',valorActual);
+    console.log('indice: ',indice);
+    console.log('valorInicial: ',valorInicial)
+    console.log('-----------------------------------')
+
+    return {name:acumulador.name,edad:valorActual.edad+acumulador.edad,rol:acumulador.rol}
 })
-console.log('array6: '+JSON.stringify(array6))
+console.log('arrayReducidoAUnElemento: ',arrayReducidoAUnElemento)

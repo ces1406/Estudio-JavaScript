@@ -4,6 +4,7 @@ const iteradorA = iterableA[Symbol.iterator]();
 console.log('iteradorA.next(): ',iteradorA.next())
 console.log('iteradorA.next(): ',iteradorA.next())
 console.log('iteradorA.next(): ',iteradorA.next())
+console.log("\x1b[32m%s\x1b[0m", '-------------------------------------------------');
 
 // Forma común de hacer un objeto "iterable":
 function iterando(vec) {
@@ -26,6 +27,7 @@ console.log('vector1.next(): '+vector1.next().valor)
 console.log('vector1.next(): '+vector1.next().valor)
 console.log('vector1.next(): '+vector1.next().valor)
 console.log('vector1.next(): '+vector1.next().valor)
+console.log("\x1b[32m%s\x1b[0m", '-------------------------------------------------');
 
 // Forma estilo ES6 de hacer un objeto "iterable":
 // (es como que nos metemos en la definición en sí de un array)
