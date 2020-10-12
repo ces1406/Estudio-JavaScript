@@ -19,7 +19,7 @@ function funcionParametro2(valor1,valor2){
 //funCallback(2,funcionParametro1)
 //funCallback(2,funcionParametro2)
 
-// Ele callback-hell: 
+// El callback-hell: 
 funCallback(5,(arg1,arg2)=>{
     console.log("--> "+arg1+" * "+arg1+" = "+arg2)
     funCallback(arg2,(val1,val2)=>{

@@ -4,6 +4,7 @@
 //       Puede servir para pasar un parametro a la promesa, se le pasa a la funcion y ésta lo pone en la promesa
 function demora(time) {
     return new Promise((res, rej) => {
+        console.log('->function demora ('+time+')')
         if (isNaN(time)) {
             rej(new Error('parametro debe ser un numero'))
         } else {

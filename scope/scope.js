@@ -9,7 +9,7 @@ function scope1 (){
     }
     console.log("Fuera del for->value: "+value1);
     // o sea que value está disponible a un scope superior?
-    // ( o en realidad "for" no está determinando ningun scope)
+    // (o en realidad "for" no está determinando ningun scope)
 };
 scope1();
 

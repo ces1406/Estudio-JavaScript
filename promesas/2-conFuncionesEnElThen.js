@@ -3,13 +3,13 @@
 // then() devuelve una promesa nueva diferente a la original
 
 const p1 = new Promise((res, rej) => {
-    console.log('promesa n°1');
+    console.log('Promesa p1');
     res('promesa 1 ok');
 });
 
 // Nota1: lo de arriba es equivalente a: const p1= Promise.resolve('promesa 1 ok')
 // Nota2: No entiendo bien pero solo con esta definición de la promesa (la de arriba) ya ejecuta a la promesa
-//        (cuando ejecuto el programa con "$> node conFunciones" se ejecuta la promesa solamente con la definición de arriba)
+//        (cuando ejecuto el programa con "$> node conFuncionesEnElThen" se ejecuta la promesa solamente con la definición de arriba)
 
 const f1 = function () {
     console.log('p1.then.then-->funcion f1 declarada afuera")')
@@ -26,7 +26,7 @@ p1.then(() => console.log('p1.then-->funcion arrow sin parametro (no posee un re
   .then(f1)
   .then(
     () => {
-        console.log('p1.then.then.then-->funcion arrow sin parametro (idem. con el tema return)')
+        console.log('p1.then.then.then-->funcion arrow sin parametro (sin return)')
         // Demora para probar que se quede esperando en este .then() y no siga avanzando
         let j = 3;
         while (j > 1) {

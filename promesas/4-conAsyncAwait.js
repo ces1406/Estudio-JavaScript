@@ -1,6 +1,6 @@
 // Promesas mediante  ASYNC/AWAIT
 
-function demora(time) {
+function demora1(time) {
     return new Promise((res, rej) => {
         if (isNaN(time)) {
             rej(new Error('parametro debe ser un numero'))
@@ -12,6 +12,7 @@ function demora(time) {
         //       Mas claro seria: setTimeout(()=>res(),time)
     })
 }
+/*
 demora2 = new Promise((res,rej)=>{
     j=0
     while(j<5){
@@ -22,13 +23,15 @@ demora2 = new Promise((res,rej)=>{
     }
     console.log('while out')
     res('OK')
-})
+})*/
 async function func1() {
-    console.log('-> func1....habrá una demora de 6 segs <-')
-    await demora(6000); // Siempre debe ser "await FuncionQueDevuelveUnaPromesa()" --->y no "await funcionPromesa()" ?
+    console.log('\t-> func1....habrá una demora de 4 segs <-')
+    await demora1(4000); // Siempre debe ser "await FuncionQueDevuelveUnaPromesa()" --->y no "await funcionPromesa()" ?
     console.log('1-este mensaje no podria aparecer sino despues de que se ejecute demora(3000)')
     //await demora2;
-    console.log('1.5-este mensaje no podria aparecer sino despues de que se ejecute demora2')
+    console.log('\t-> func1....habrá una demora de 2 segs <-')
+    await demora1(2000);
+    console.log('2-este mensaje no podria aparecer sino despues de que se ejecute demora2')
 }
 
 function func2() {
@@ -41,5 +44,5 @@ function func2() {
 }
 
 // Probando async-await y también el orden en que se ejecuten los llamados y mensajes
-//func1();
-func2();
+func1();
+//func2();

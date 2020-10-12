@@ -1,6 +1,7 @@
-var  {prom1} = require('./5-encadenamiento');
-var  {prom3} = require('./5-encadenamiento')
-var  {funprom2} = require('./5-encadenamiento')
+const  {prom1,funprom2,prom3} = require('./5-encadenamiento');
+// ¡¡NOTA!!: 
+//  HACIENDO--> var {prom1} = require('./5-encadenamiento')
+//  lo que pasa es: se ejecuta el programa que hay en 5-encadenamiento.js 
 
 prom1()
     .then(funprom2)

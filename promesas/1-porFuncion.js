@@ -13,7 +13,8 @@ var usuario = {
 var navbar = {
     show: function (user) {
         // USA UN THEN SIN QUE setPerfil() SEA UNA PROMESA => da ERROR
-        user.setPerfil().then(function () {
+        user.setPerfil()
+        .then(function () {
             console.log('*** Navbar ***');
             console.log('Name: ' + perfi.nombre);
         });
