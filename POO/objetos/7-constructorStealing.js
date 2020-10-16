@@ -8,7 +8,7 @@ function Persona1(nom, domic) {
     this.getNombre = () => { return 'Nombre :' + this.nombre }
 }
 function Persona2() { 
-    Persona1.call(this, 'JUAN', { calle: 'ALSINA', nro: 111 }) 
+    Persona1.call(this,'JUAN',{calle:'ALSINA', nro:111}) 
 } 
 function Persona3(){
     Persona1.apply(this,['CARLOS',{calle:'PERON',nro:333}])

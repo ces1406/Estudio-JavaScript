@@ -1,3 +1,10 @@
+* {
+    border-color: rgb(236, 235, 179)!important;
+    border-width: 1px;
+    border-style: solid;
+    margin: 1ex 1ex 1ex 1ex;
+    padding: 1ex 1ex 1ex 1ex;
+}
 :root{ /*etiqueta root (??)*/
     --amarillo1:#F7DF1E; /*declarando una variable amarillo1*/    
     --oscuro1: #222;
@@ -6,19 +13,11 @@
     color: rgb(251, 250, 238);    
 }
 .container{
-    color: rgb(210, 220, 218);  
-    border-color: rgb(200, 210, 208)!important;
-    border-color: rgb(251, 250, 238)!important;
-    border-width: 1px;
-    border-style: solid;
+    color: rgb(210, 220, 218);      
     display: flex;
 }
 .elemento{
     color: rgb(201, 220, 218);  
-    border-color: rgb(200, 210, 208)!important;
-    border-color: rgb(251, 250, 238)!important;
-    border-width: 1px;
-    border-style: solid;
 }
 #personalDataId{
     background-color: rgb(25, 48, 49);
@@ -32,6 +31,7 @@
     font-size:1.2rem;
     text-align:center;
 }
+
 #idDivPropagacion1{
     background-color: yellow;
 }

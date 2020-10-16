@@ -2,7 +2,7 @@
 function Persona1(nomb) {
     this.nombre = nomb
 }
-Persona1.prototype.descripcion = function () { return 'Persona->' + this.nombre }
+Persona1.prototype.descripcion = function () { return '·Persona->' + this.nombre }
 Persona1.prototype.edad = 55;
 var personaA = new Persona1('Juan');
 var personaB = new Persona1('kokot');
@@ -10,7 +10,6 @@ console.log(personaA.descripcion());
 console.log("Propiedad edad: " + personaA.edad)
 console.log(personaB.descripcion())
 console.log("Propiedad edad: " + personaB.edad)
-
 
 // Viendo los prototipos cuando no hay constructor 
 var objeto1 = {
@@ -22,7 +21,6 @@ var objeto1 = {
 };
 console.log(objeto1.prop4())
 
-// Prueba
 console.log("\x1b[36m%s\x1b[0m", '-----------------------------------------')
 
 // viendo el tema de  ...= variable || {objeto}
