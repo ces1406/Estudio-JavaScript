@@ -96,24 +96,95 @@ console.log("palind('escaparapacse'): "+ palind('escaparapacse'))
 //8) Programa una función que elimine cierto patrón de caracteres de un texto dado, 
 //pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
 function elimine(cadena,patron){
-    /*let rta = '';
+    let rta = '';
+    let marca=0;
     for(let i=0; i<cadena.length; i++){
-        let cadAux = cadena.substring(i,i+cadena.length);
+        let cadAux = cadena.substring(i,i+patron.length);
         if(cadAux.localeCompare(patron)===0){
-            rta += cadena.substring(i,)
+            rta += cadena.substring(marca,i);
+            marca = i+patron.length;
         }
-    }*/
+        if(i==cadena.length-1){
+            if(marca!==cadena.length-1-patron.length){
+                rta += cadena.substring(marca,cadena.length)
+            }
+        }
+    }
     // otra opcion mas corta:
-    let vec = cadena.split(patron);
+    /*let vec = cadena.split(patron);
     let rta = '';
     for(let i=0; i<vec.length; i++){
         rta += vec[i]
-    }
+    }*/
     return rta
 }
-console.log('elimine("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"): ',elimine("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"))
+console.log('elimine("33xyz1, xyz2, xyz3, xyz4 y xyz5aabbbbcxyz", "xyz"): ',elimine("33xyz1, xyz2, xyz3, xyz4 y xyz5aabbbbcxyz", "xyz"))
 
 //9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+function aleatoria(){
+        return (Math.floor(Math.random()*100))%99+501
+}
+console.log('aleatoria(): '+aleatoria())
 
-//10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
-//11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
+//10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro),
+//    pe. miFuncion(2002) devolverá true.
+function capicua(num){
+    vecAux1 = Array.from(num.toString());
+    vecAux2 = vecAux1.slice().reverse();
+    console.log('vec1: '+vecAux1)
+    console.log('vec2: '+vecAux2)
+    for(let i=0; i<vecAux1.length; i++){
+        //console.log('')
+        if(vecAux1[i]!==vecAux2[i]){
+            return 'no capicua';
+        }
+    }
+    return 'capicua'
+}
+console.log(capicua(545))
+
+//11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, 
+//    se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
+const factorial = function f1 (n){
+    if(n===0||n===1){
+        return 1;
+    }
+    return n*f1(n-1)
+}
+console.log('factorial(5): '+factorial(4))
+
+//->Ejercicios 12 a 16 muy faciles<-
+//17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, 
+//    pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+function anios(fecha){
+    return (new Date().getFullYear())-fecha.getFullYear()
+}
+console.log(anios(new Date(1944,4,23)))
+
+//21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado,
+//    pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+function cuadra(vec){
+    return vec.map(e => e*e);
+}
+console.log('cuadra([1,4,5]): ',cuadra([1,4,5]))
+
+//22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, 
+//    pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+function maymen(vec){
+    vec.sort((a,b)=>a-b)
+    return [vec[0],vec[vec.length-1]]
+}
+console.log(maymen([244,3,445,5,6,78,99,9]))
+
+//23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números 
+//    pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+function dosVec(vec){
+    vecPar = vec.filter((valor,indice,vec)=>{
+        return valor%2===0
+    })
+    vecImpar = vec.filter((valor,indice,vec)=>{
+        return valor%2!==0
+    })
+    return {pares:vecPar,impares:vecImpar}
+}
+console.log(dosVec([2,3,1,6,8,9]))
