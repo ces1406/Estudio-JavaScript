@@ -23,10 +23,10 @@ function iterando(vec) {
     }
 }
 var vector1 = iterando(['uno','dos','tres'])
-console.log('vector1.next(): '+vector1.next().valor)
-console.log('vector1.next(): '+vector1.next().valor)
-console.log('vector1.next(): '+vector1.next().valor)
-console.log('vector1.next(): '+vector1.next().valor)
+console.log('vector1.next().valor: '+vector1.next().valor)
+console.log('vector1.next().valor: '+vector1.next().valor)
+console.log('vector1.next(): ',vector1.next())
+console.log('vector1.next(): ',vector1.next())
 console.log("\x1b[32m%s\x1b[0m", '-------------------------------------------------');
 
 // Forma estilo ES6 de hacer un objeto "iterable":

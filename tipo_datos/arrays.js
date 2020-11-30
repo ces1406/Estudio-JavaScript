@@ -2,7 +2,11 @@ var array1=[99,3,1500,31,1,1,6,777,88,8990];
 var array2=[{name:'juan',edad:11},{name:'jose',edad:22},{name:'coco',edad:77},{name:'maria',edad:66},{name:'marta',edad:3}];
 var persona1 = {name:'jose',edad:22}
 
-
+//----------------------------------------for(item of iterable)----------------------------------------------------
+let iterable=[{prop1:'luis',prop2:33},{prop1:'Sandra',prop2:33,prop3:false},{prop1:'Marok',prop3:false}];
+for(item of iterable){
+    console.log('item.prop1: '+item.prop1)
+}
 
 //------------------------------------------array.toString()-------------------------------------------------
 console.log("\x1b[35m%s\x1b[0m", '------------------------------------------array.toString()-------------------------------------------------')
@@ -34,8 +38,8 @@ console.log('array2(DESPUES DE->unShifth): ',array2)
 
 //--------------------------------------array.indexOf(valorNumerico)----------------------------------------
 console.log("\x1b[35m%s\x1b[0m", '--------------------------------------array.indexOf(valorNumerico)----------------------------------------')
-console.log("array2.indexOf({name:'coco',edad:77}: "+array2.indexOf({name:'coco',edad:77}));
-console.log("array1.indexOf(6): "+array1.indexOf(6))
+console.log("array2.indexOf({name:'coco',edad:77}: "+array2.indexOf({name:'coco',edad:77}));    // NO SIRVE (en arrays de objetos)
+console.log("array1.indexOf(6): "+array1.indexOf(6))                                            // SI SIRVE (en arrays simples)
 console.log("indexOf es metodo de datos tipo String ??")
 //---------------------------------------array.findIndex(funcion)-------------------------------------------
 console.log("\x1b[35m%s\x1b[0m", '---------------------------------------array.findIndex(funcion)-------------------------------------------')
@@ -80,6 +84,7 @@ console.log('array2(LUEGO DE->splice(2,1)): ',array2)
 console.log("\x1b[35m%s\x1b[0m", '--------------------------------unArray = array.reverse()-----------------------------------------------')
 console.log('array1: '+JSON.stringify(array1))
 console.log('array1.reverse(): '+JSON.stringify(array1.reverse()))
+console.log('array2: '+JSON.stringify(array2))
 console.log('array2.reverse(): '+JSON.stringify(array2.reverse()))
 //---------------------------------------array.sort()---ORDEN ALFABETICO-----------------------------------
 console.log("\x1b[35m%s\x1b[0m", '---------------------------------------array.sort()---ORDEN ALFABETICO-----------------------------------')

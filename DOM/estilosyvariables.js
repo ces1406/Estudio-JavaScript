@@ -12,7 +12,7 @@ const colorStyle = $titulo.style.color;
 
 console.log("\x1b[34m%s\x1b[0m", '$titulo: ', $titulo)
 console.log("\x1b[34m%s\x1b[0m", '$formu: ',$formu)
-console.log("\x1b[34m%s\x1b[0m", '$estiloTitulo.style: ', estiloTitulo)
+console.log("\x1b[34m%s\x1b[0m", '$titulo.style: ', estiloTitulo)
 console.log("\x1b[34m%s\x1b[0m", '$formu.style: ', estiloFormu)
 console.log("\x1b[34m%s\x1b[0m", '$titulo.getAttribute("style"): ', estiloTitulo2); //me devuelve el $enlace.style.cssText ?
 console.log("\x1b[34m%s\x1b[0m", 'window.getComputedStyle("$titulo"): ', estiloTitulo3)

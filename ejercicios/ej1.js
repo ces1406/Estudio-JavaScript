@@ -188,3 +188,17 @@ function dosVec(vec){
     return {pares:vecPar,impares:vecImpar}
 }
 console.log(dosVec([2,3,1,6,8,9]))
+
+var paleta = document.getElementById("paleta")
+for(let r=0; r<5;r++){
+    var red=r;
+    for(let g=0;g<5;g++){
+        green=g
+        for(let b=0;b<5;b++){
+            let item=document.createElement("div")
+            item.innerHTML="rgb->("+r*63+','+g*63+','+b*63+')';
+            item.style.backgroundColor = "rgb("+r*63+","+g*63+","+b*63+")"
+            paleta.appendChild(item)
+        }
+    }
+}
