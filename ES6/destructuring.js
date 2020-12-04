@@ -1,5 +1,5 @@
 // Destructuring en arrays:
-const animales=['pato','ganzo','pollo'];
+const animales=['pato','ganzo','pollo','mamut'];
 var var1 = animales[0];
 var var2 = animales[1];
 console.log('var1->',var1)

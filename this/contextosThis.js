@@ -15,7 +15,7 @@ objeto1.prop3 = function (num) { this.prop1 -= num; }
 // Probándolo:
 console.log('objeto1.prop1: ' + objeto1.prop1);
 objeto1.prop3(3);
-console.log('objeto1.propo3(1): ' + objeto1.prop1);
+console.log('objeto1.propo3(3): ' + objeto1.prop1);
 
 //2)Uso inadecuado del "this" dentro del metodo agregado:
 console.log("\x1b[36m%s\x1b[0m", "-----------------------------------------------------");

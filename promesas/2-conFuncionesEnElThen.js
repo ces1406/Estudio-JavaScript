@@ -9,7 +9,7 @@ const p1 = new Promise((res, rej) => {
 
 // Nota1: lo de arriba es equivalente a: const p1= Promise.resolve('promesa 1 ok')
 // Nota2: No entiendo bien pero solo con esta definición de la promesa (la de arriba) ya ejecuta a la promesa
-//        (cuando ejecuto el programa con "$> node conFuncionesEnElThen" se ejecuta la promesa solamente con la definición de arriba)
+//        (cuando ejecuto el programa con "$> node 2-conFuncionesEnElThen" se ejecuta la promesa solamente con la definición de arriba)
 
 const f1 = function () {
     console.log('p1.then.then-->funcion f1 declarada afuera")')

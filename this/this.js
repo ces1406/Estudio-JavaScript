@@ -5,7 +5,7 @@ const animal = {
     alimento() { console.log('dieta: ' + dieta) },                      // da error    
     alimento2() { console.log('dieta: ' + this.dieta) },                // no da error    
     alimento3: function () { console.log('dieta: ' + this.dieta) },     // no da error --> segun muchos libros tendría que dar undefined   
-    //function alimento4 () { console.log('dieta:'+this.dieta)}, //--->definicion erronea (no se puede definir así)
+    //function alimento4 () { console.log('dieta:'+this.dieta)},        //--->definicion erronea (no se puede definir así)
     cumple: () => { console.log('come: ' + dieta) },                    // da error tambien aunque sea una arrow function    
     cumple2: () => { console.log('come: ' + this.dieta) }               // da "undefined"
 }
@@ -42,7 +42,9 @@ function Persona2(nombre) {
 const persona1 = new Persona('jhon');
 persona1();
 console.log('->persona1 es un new Persona()=> se creó algo?->persona1: ');
-console.log(persona1); // -->persona1 es la funcion que retorno Persona (???)
+console.log('persona1: ',persona1); // -->persona1 es la funcion que retorno Persona (???)
+console.log('persona1: '+persona1); // -->persona1 es la funcion que retorno Persona (???)
+console.log('-----------------------------')
 const persona2 = new Persona2('john');
 persona2();
 
