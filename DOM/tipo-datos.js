@@ -22,8 +22,8 @@ console.log('cadena1 : ' + cadena1);
 console.log('cadena2 : ' + cadena2);
 console.log('typeof cadena1 : ' + typeof cadena1)
 console.log('typeof cadena2 : ' + typeof cadena2)
-cadena2 = "cambiando string"
-console.log('cambiando cadena2 (lo que producirá que tambien cambie cadena1?)' );
+cadena1 = "cambiando string"
+console.log('cambiando cadena1 (lo que producirá que tambien cambie cadena2?)' );
 console.log('cadena1 : ' + cadena1);
 console.log('cadena2 : ' + cadena2);
 console.log('NO->por que string es un tipo de dato primitivo, no es referenciado' );
@@ -56,6 +56,6 @@ console.log("cadena1.length:",cadena1.length);
 console.log('cadena1.concat(" completa") : ' + cadena1.concat(" completa"));
 console.log('cadena1 : ' + cadena1);
 console.log('cadena1.indexOf("de") : ' + cadena1.indexOf('de'));
-console.log('cadena1.charAt(8) : ' + cadena1.charAt(8));
+console.log('cadena1.charAt(0) : ' + cadena1.charAt(0));
 console.log('cadena1.substring(2,5) : ' + cadena1.substring(2,5));
 console.log('cadena1.localeCompare("aaaaa") : ' + cadena1.localeCompare('zaaaa'));

@@ -11,13 +11,14 @@ const formularios = document.forms;
 const elementosInputApellido = document.getElementsByName('apellido');
 const elementosClaseInput = document.getElementsByClassName('input')
 
+console.log("\x1b[32m%s\x1b[0m", 'document: ', document);
 console.log("\x1b[32m%s\x1b[0m", 'document.documentElement  (representa a la etiqueta HTML): ', documento);
 console.log("\x1b[32m%s\x1b[0m", 'document.body             (representa a la etiqueta body): ', body);
 console.log("\x1b[32m%s\x1b[0m", 'document.getElementsByTagName("img"): ', elementosImg1);
 console.log("\x1b[32m%s\x1b[0m", 'document.images: ', elementosImg2);
 console.log("\x1b[32m%s\x1b[0m", 'document.forms: ', formularios);
 console.log("\x1b[32m%s\x1b[0m", 'document.getElementsByTagName("img")[0]: ', elementosImg1[0]);
-console.log("\x1b[32m%s\x1b[0m", 'document.getElementsByName("apallido"): ', elementosInputApellido);
+console.log("\x1b[32m%s\x1b[0m", 'document.getElementsByName("apellido"): ', elementosInputApellido);
 console.log("\x1b[32m%s\x1b[0m", 'document.getElementsByClassName("input"): ', elementosClaseInput);
 console.log("\x1b[32m%s\x1b[0m", 'document.getElementsByClassName("input")[0]: ', elementosClaseInput[0]);
 console.log("\x1b[32m%s\x1b[0m", 'document.location: ', document.location);
@@ -45,7 +46,7 @@ console.log("\x1b[32m%s\x1b[0m", 'document.querySelectorAll(".elemento")[2].chil
 console.log("\x1b[32m%s\x1b[0m", 'document.documentElement.nodeType:', document.documentElement.nodeType)
 console.log("\x1b[32m%s\x1b[0m", 'document.querySelectorAll(".elemento")[2].childNodes[2].childNodes:', subElemento2.childNodes)
 const textoSubElemento2 = subElemento2.childNodes[0]
-console.log("\x1b[32m%s\x1b[0m", 'textoSubElemento2:', textoSubElemento2)
+console.log("\x1b[32m%s\x1b[0m", 'textoSubElemento2 = document.querySelectorAll(".elemento")[2].childNodes[1].childNodes[0]:', textoSubElemento2)
 console.log("\x1b[32m%s\x1b[0m", 'textoSubElemento2.nodeType:', textoSubElemento2.nodeType)
 console.log("\x1b[32m%s\x1b[0m", 'textoSubElemento2.nodeValue:', textoSubElemento2.nodeValue)
 textoSubElemento2.nodeValue = "Otro titulo (cambiado con javascript)"
