@@ -13,9 +13,9 @@ function sumarDosVeces(func,val1,val2){
 }
 
 
-console.log('->funcion como parametro -> sumarDosVeces(sumar1,3,4)='+sumarDosVeces(sumar1,3,4));
+console.log('->funcion como parametro -> sumarDosVeces(sumar1,3,4)=' + sumarDosVeces(sumar1,3,4));
 console.log('->Las funciones tienen las propiedades: ');
-console.log('\tsumar2.length = cantidad de argumentos -->  '+sumar2.length)
+console.log('\tsumar2.length = cantidad de argumentos -->  ' + sumar2.length)
 console.log('\tsumar2.prototype = la ubicacion de los metodos -->  ',sumar2.prototype)
-console.log('->usando apply -> sumar3(3,1) = '+sumar3(3,1))
-console.log('->usando apply -> sumar4(3,41) = '+sumar4(3,41))
+console.log('->usando apply -> sumar3(3,1) = ' + sumar3(3,1))
+console.log('->usando apply -> sumar4(3,41) = ' + sumar4(3,41))

@@ -32,8 +32,7 @@ let primeroSacado = array2.shift();
 console.log('Elemento shift()ed: ',primeroSacado);
 console.log('array2(DESPUES DE->shift): ',array2)
 let arrayUnshift = array2.unshift({name:'KRISTINA',edad:55})
-console.log('array2(DESPUES DE->unShifth): ',array2)
-
+console.log('array2(DESPUES DE->unShifth): ',array2);
 
 
 //--------------------------------------array.indexOf(valorNumerico)----------------------------------------
@@ -56,9 +55,7 @@ function encontrar (nombre){
         }
     ))
 }
-console.log('Buscar "coco"->encontrar("coco"): ',encontrar('coco'))
-
-
+console.log('Buscar "coco"->encontrar("coco"): ',encontrar('coco'));
 
 //-----unArray.splice(posDondeAgregar,cantElementosARemover,elementoAAgregar1,elementoAAgregar2,....)-------
 console.log("\x1b[35m%s\x1b[0m", '--------splice(posDondeAgregar,cantElementosARemover,elementoAAgregar1,elementoAAgregar2,....)-----------')
@@ -76,7 +73,7 @@ console.log('unArray: ',unArray)
 console.log("\x1b[35m%s\x1b[0m", '-----------------------------var unArray = array.slice(posInicio,posFinal)-------------------------------')
 let array3 = array2.slice();
 console.log('array3 = array2.slice() : ',array3)
-console.log('array2.slice(2,3): ',array2.splice(2,1))
+console.log('array2.slice(1,3): ',array2.slice(1,3))
 console.log('array2(LUEGO DE->splice(2,1)): ',array2)
 
 
@@ -108,7 +105,7 @@ console.log("\x1b[35m%s\x1b[0m", '-----------------------------------unArray = a
 var array4 = []
 array4 = array2.map(elem=>{
     let newElem = elem;
-    newElem.rol = 'usuario' //SE TERMINA AFECTANDO A array2
+    newElem.rol = 'usuario' //SE TERMINA AFECTANDO (indirectamente) A array2
     return newElem
 })
 doblar =function (elem){
@@ -118,6 +115,7 @@ var array44 = array2.map(doblar)
 console.log('array4: ',array4)
 console.log('array44: ',array44)
 console.log('array3: ',array3)
+console.log('array2: ',array2)
 let array33 = array3.map(elem=>{
     /*let newElem;
     newElem.edad = elem.edad;

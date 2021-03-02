@@ -18,8 +18,9 @@ $btn1.onclick = (e) => {
 // Desventajas:
 // 1)solo se ejecuta una sola y única funcion
 // 2)no se puede remover el manejador del evento
-// 3)la funcion NO puede recibir parametros. La única opcion es 
-//      un solo y que representa al evento(aunque tampoco es necesario porque se la puede invocar mediante la palabra reservada "event")
+// 3)la  funcion  NO puede recibir parametros. La  única  opcion  es 
+//  un  solo y que representa al evento (aunque tampoco es necesario 
+//  porque se la puede invocar mediante la palabra reservada "event")
 
 //3-Con Manejadores múltiples -> EventListeners:
 const $btn2 = document.getElementById("idBoton4");
@@ -42,8 +43,8 @@ function saludar(nomb='vacio'){
             parametros que el evento en si (el event, o "e")
     */
 }
-$btn2.addEventListener('click',()=>saludar())
-/* Nota: truco (lo de arriba) para permitir uso de parametros, agregar un nivel mas de 
+$btn2.addEventListener('click',()=>saludar(' Mr. Putin'))
+/* Nota: lo de arriba es el truco para permitir uso de parametros, agregar un nivel mas de 
          ejecución
 */
 $btn2.addEventListener("click",saludar)

@@ -5,7 +5,7 @@
 var usuario = {
     perfil: null,
     setPerfil: function () {
-        this.perfil = { nombre: 'putin puton', apellido: 'reuputin' };
+        this.perfil = { nombre: 'vladimir', apellido: 'putin' };
         return this.perfil
     }
 };

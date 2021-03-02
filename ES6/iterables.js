@@ -4,6 +4,10 @@ const iteradorA = iterableA[Symbol.iterator]();
 console.log('iteradorA.next(): ',iteradorA.next())
 console.log('iteradorA.next(): ',iteradorA.next())
 console.log('iteradorA.next(): ',iteradorA.next())
+console.log('iteradorA.next(): ',iteradorA.next())
+console.log('iteradorA.next(): ',iteradorA.next())
+console.log('iteradorA.next(): ',iteradorA.next())
+console.log('iteradorA.next(): ',iteradorA.next())
 console.log("\x1b[32m%s\x1b[0m", '-------------------------------------------------');
 
 // Forma común de hacer un objeto "iterable":
