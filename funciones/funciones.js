@@ -19,3 +19,9 @@ console.log('\tsumar2.length = cantidad de argumentos -->  ' + sumar2.length)
 console.log('\tsumar2.prototype = la ubicacion de los metodos -->  ',sumar2.prototype)
 console.log('->usando apply -> sumar3(3,1) = ' + sumar3(3,1))
 console.log('->usando apply -> sumar4(3,41) = ' + sumar4(3,41))
+
+for(var i=0;i<3;i++){
+    let j=i
+    console.log('->i:'+i)
+    setTimeout(function(){console.log('i: '+i)},1500)
+}

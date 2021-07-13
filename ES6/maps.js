@@ -2,6 +2,7 @@ let mapa = new Map();
 let obj1={r:0,g:1,b:2}
 
 mapa.set("nombre","Juan")
+mapa.set("nombre","Juan")
 mapa.set("apellido","Lopes")
 mapa.set("edad",44)
 mapa.set(obj1,22)
@@ -13,8 +14,9 @@ console.log(mapa.get("nombre"))
 mapa.set("nombre","Jose")
 console.log(mapa.get("nombre"))
 console.log('mapa.get({r:0,g:1,b:2})',mapa.get(obj1))
-console.log('mapa.get({r:0,g:1,b:2})',mapa.get('{r:0,g:1,b:2}'))
-console.log('mapa.has({r:0,g:1,b:2})',mapa.has())
+console.log('mapa.get("{r:0,g:1,b:2}")',mapa.get('{r:0,g:1,b:2}'))
+console.log('mapa.has({r:0,g:1,b:2})',mapa.has({r:0,g:1,b:2}))
+console.log('mapa.has(obj1)',mapa.has(obj1))
 mapa.delete("nombre")
 console.log('mapa:  ',mapa)
 

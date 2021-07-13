@@ -40,12 +40,14 @@ function Persona2(nombre) {
 }
 
 const persona1 = new Persona('jhon');
+console.log('persona1():');
 persona1();
 console.log('->persona1 es un new Persona()=> se creó algo?->persona1: ');
 console.log('persona1: ',persona1); // -->persona1 es la funcion que retorno Persona (???)
 console.log('persona1: '+persona1); // -->persona1 es la funcion que retorno Persona (???)
 console.log('-----------------------------')
 const persona2 = new Persona2('john');
+console.log('persona2():');
 persona2();
 
 class Contador {

@@ -26,13 +26,18 @@ cadena2 = "cambiando string"
 console.log('cambiando cadena2 (lo que producirá que tambien cambie cadena1?)' );
 console.log('cadena1 : ' + cadena1);
 console.log('cadena2 : ' + cadena2);
-console.log('NO->por que string es un tipo de dato primitivo, no es referenciado' );
+console.log('NO->por que string es un tipo de dato primitivo, no es referenciado\n' );
+
+var vector1 = new Array();
+var date1 = new Date();
 console.log('typeof numero : ' + typeof numero)
 console.log('typeof buleano : ' + typeof buleano)
 console.log('typeof nul : ' + typeof nul)
 console.log('typeof objetoVacio : ' + typeof objetoVacio);
 console.log('typeof objetoLleno : ' + typeof objetoLleno)
-console.log('typeof funcion1 : ' + typeof funcion1)
+console.log('typeof funcion1 : ' + typeof funcion1);
+console.log('typeof vector1 : ' + typeof vector1)
+console.log('typeof date1 : ' + typeof date1)
 console.log('typeof simbolo1 : ' + typeof simbolo1)
 console.log('typeof simbolo2 : ' + typeof simbolo2)
 var objeto2 = objetoLleno;
@@ -59,3 +64,22 @@ console.log('cadena1.indexOf("de") : ' + cadena1.indexOf('de'));
 console.log('cadena1.charAt(8) : ' + cadena1.charAt(8));
 console.log('cadena1.substring(2,5) : ' + cadena1.substring(2,5));
 console.log('cadena1.localeCompare("aaaaa") : ' + cadena1.localeCompare('zaaaa'));
+var cadena11 = cadena1.slice(2,5)
+console.log('cadena1.slice(2,5): '+cadena11)
+var vecStrings = cadena1.split(' ');
+console.log('vector->cadena1.split(" "): ',vecStrings)
+
+//---------------------Undefined-----------------------
+var a;
+if(a===undefined){ console.log('var a; --->es undefined 1')}
+if(a==undefined){ console.log('var a; --->es undefined (con operador ==) 1')}
+a=null;
+if(a===undefined){ console.log('var a; --->es undefined 2') }
+if(a==undefined){ console.log('var a; --->es undefined (con operador ==) 2')}
+// if(aa===undefined){ console.log('la variable aa no existente; --->es undefined ')} --> tira error
+
+let fecha1 = new Date();
+let cad1 = ""
+console.log('fecha1: ',fecha1);
+fecha1.setHours("10:00:05")
+console.log('fecha1: ',fecha1);
