@@ -16,8 +16,8 @@ function funcionParametro2(dato1,dato2){
 }
 
 // Pruebas de ejecución de la funCallback():
-funCallback(2,funcionParametro1)
-funCallback(2,funcionParametro2)
+//funCallback(2,funcionParametro1)
+//funCallback(2,funcionParametro2)
 
 // El callback-hell: 
 funCallback(5,(arg1,arg2)=>{

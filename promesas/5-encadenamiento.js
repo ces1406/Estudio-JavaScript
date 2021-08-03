@@ -45,9 +45,10 @@ const funcPromesa3 = (num0) => {
 
 // Encadenamiento efectivo de las promesas:
 promesa1()
-    .then(funcPromesa2)
+    .then(funcPromesa2) // OJO: no es lo mismo que "funcPromesa2()"---->ahí no respeta la espera de la resolución de la promesa
     .then(funcPromesa3)
     .catch(err=>console.log('salto el error: '+err)); 
 module.exports = { prom1: promesa1, prom3: funcPromesa3, funprom2: funcPromesa2 }
+
 //module.exports = promesa1
 //exports.prom1=promesa1;

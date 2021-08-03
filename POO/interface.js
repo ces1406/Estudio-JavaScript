@@ -14,13 +14,13 @@ var Interface = function(nombre,metodos){
 
 // Clase estatica de metodos (o, metodo que chequea que un obj cumple con la interface):
 Interface.asegurarImplementacion = function (obj){ 
-    if(arguments.length < 2){ throw new Error("Interface.asegurarImplementacion con argumentos faltantes")};
+    if(arguments.length < 2) { throw new Error("Interface.asegurarImplementacion con argumentos faltantes")};
     for(let i=1,len=arguments.length;i<len;i++){
         var interface = arguments[i];
-        if(interface.constructor !== Interface){ throw new Error("Arguemntso debe ser instancias de Interface")}
+        if(interface.constructor !== Interface){ throw new Error("Argumentos debe ser instancias de Interface")}
         for(let j=1,long=interface.metodos.length;j<long;j++){
             var metodo = interface.metodos[j];
-            if(!obj[metodo] || typeof obj[metodo]!== 'function'){
+            if( !obj[metodo] || typeof obj[metodo] !== 'function' ){
                 throw new Error("El objeto NO implementa la interface "+interface.nombre+" metodo no encontrado:"+metodo)
             }
         }
