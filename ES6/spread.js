@@ -3,11 +3,10 @@ const vec2 = [6,7,8,9]
 const vec3 = [1,3,7,8]
 
 let vec4 =[...vec1,...vec2];
-console.log('vec4: ',vec4);
 console.log('vec4: '+JSON.stringify(vec4));
 
 let vec5 = [...vec1,...vec3];
-console.log('vec5: ',vec5)
+console.log('vec5: '+JSON.stringify(vec5));
 
 // Ver la diferencia: [vec1] con [...vec1] :
 let vec6 =[vec1,1];

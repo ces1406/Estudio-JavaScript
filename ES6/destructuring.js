@@ -2,17 +2,17 @@
 const animales=['pato','ganzo','pollo','mamut'];
 var var1 = animales[0];
 var var2 = animales[1];
-console.log('var1->',var1)
-console.log('var2->',var2)
-console.log('-------------')
+console.log('var1->',var1);
+console.log('var2->',var2);
+console.log('-------------');
 const [var11,var22] = animales;
-console.log('var11->',var11)
-console.log('var22->',var22)
-console.log('-------------')
+console.log('var11->',var11);
+console.log('var22->',var22);
+console.log('-------------');
 var [var12,,var13] =animales;
-console.log('var12->',var12)
-console.log('var13->',var13)
-console.log('-------------')
+console.log('var12->',var12);
+console.log('var13->',var13);
+console.log('-------------');
 
 // Destructuring en objetos:
 const objeto1 ={ a:'casa', b:'departamento', c:'choza' };

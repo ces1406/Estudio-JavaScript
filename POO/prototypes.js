@@ -1,15 +1,29 @@
 // Agregando metodos y atributos en el prototipo
 function Persona1(nomb) {
-    this.nombre = nomb
+    this.nombre = nomb;
+    this.adorna = function(){
+        console.log('->'+this.nombre+'<-')
+    }
 }
-Persona1.prototype.descripcion = function () { return '·Persona->' + this.nombre }
+Persona1.prototype.descripcion = function () { return 'Descripcion-->' + this.nombre }
 Persona1.prototype.edad = 55;
 var personaA = new Persona1('Juan');
 var personaB = new Persona1('kokot');
 console.log(personaA.descripcion());
-console.log("Propiedad edad: " + personaA.edad)
+console.log("personaA.edad: " + personaA.edad)
 console.log(personaB.descripcion())
-console.log("Propiedad edad: " + personaB.edad)
+console.log("personaB.edad: " + personaB.edad)
+personaA.adorna();
+
+console.log("\x1b[36m%s\x1b[0m", '-----------------------------------------')
+function Profesor (mat){
+    this.materia=mat;
+}
+Profesor.prototype = new Persona1('caltriverio');
+var profA = new Profesor('literatura');
+console.log(profA.descripcion());
+console.log("profA.edad: " + profA.edad)
+profA.adorna()
 
 // Viendo los prototipos cuando no hay constructor 
 var objeto1 = {
@@ -44,6 +58,9 @@ function ConstructorHijo1 (nombre,edad,protegido,deporte){
     this.padre = ConstructorPadre1;
     this.padre(nombre,edad,protegido); //---->??por que ??
     /* Porque todo lo que se declaró en ConstructorPadre1 como: "this.blabla.." => ese THIS en el contexto de ConstructorHijo1 queda asociado a él (sera asi?) */
+    /* (o...porque al hacer "new ConstructorHijo1(...)" la funcion constructora "ConstructorPadre1" que en definitva se invoca en este scope tambien se le hace un "new() )??" */
+    /* Tambien porque al instanciar un objeto de "ConstructorHijo" => ¿Como hago para asignar los atributos "nombre", "edad", "protegido"? Bueno ésta es una
+       forma de hacerlo */
     this.deporte = deporte;
     this.deportar = function (){console.log('Deporteo -> '+this.deporte)}
 }

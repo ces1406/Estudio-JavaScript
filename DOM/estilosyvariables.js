@@ -10,13 +10,14 @@ const estiloTitulo2 = $titulo.getAttribute("style");
 const estiloTitulo3 = window.getComputedStyle($titulo);
 const colorStyle = $titulo.style.color;
 
-console.log("\x1b[34m%s\x1b[0m", '$titulo: ', $titulo)
-console.log("\x1b[34m%s\x1b[0m", '$formu: ',$formu)
-console.log("\x1b[34m%s\x1b[0m", '$titulo.style: ', estiloTitulo)
-console.log("\x1b[34m%s\x1b[0m", '$formu.style: ', estiloFormu)
-console.log("\x1b[34m%s\x1b[0m", '$titulo.getAttribute("style"): ', estiloTitulo2); //me devuelve el $enlace.style.cssText ?
-console.log("\x1b[34m%s\x1b[0m", 'window.getComputedStyle("$titulo"): ', estiloTitulo3)
-console.log("\x1b[34m%s\x1b[0m", '$titulo.style.color: ', colorStyle);
+console.log('$titulo: ', $titulo)
+console.log('$formu: ',$formu)
+console.log('$titulo.style: ', estiloTitulo)
+console.log('JSON.stringify($titulo.style): '+JSON.stringify(estiloTitulo))
+console.log('$formu.style: ', estiloFormu)
+console.log('$titulo.getAttribute("style"): ', estiloTitulo2); //me devuelve el $enlace.style.cssText ?
+console.log('window.getComputedStyle("$titulo"): ', estiloTitulo3)
+console.log('$titulo.style.color: ', colorStyle);
 
 $titulo.style.setProperty("text-decoration", "underline")
 $titulo.style.width = "50%"

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="index.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <script src="./DOM/estilosyvariables.js" defer="defer"></script>
 </head>
 
 <body style="background-color: #0B201F;">
@@ -154,19 +155,28 @@
 
 
   <script>
-    let texto = "buuueeeen dia familia como se levantaron. Bieeen?"
-    //let texto = "esa de vamos a la playa"
-    const ut = new SpeechSynthesisUtterance(texto);
+    //let texto = "buuueeeen dia familia como se levantaron. Bieeen?";
+    /* let boton4 = document.getElementById('idBoton4');
+    let texto = "esa de vamos a la playa"
+    const ut = new SpeechSynthesisUtterance("esa de vamos a la playa");
     speechSynthesis.speak(ut);
-    //const hablar = (t) => speechSynthesis.speak(new SpeechSynthesisUtterance(t))
-    //hablar(texto)
-    console.log(document.doctype)
-    console.log(document.URL)
-    console.log(document.domain)
+    const hablar = (t) => speechSynthesis.speak(new SpeechSynthesisUtterance(t))
+    hablar(texto)
+    function hablar2(e){
+      console.log('e.target->',e.target);
+      const tx="esa de vamos a la playa"
+      //speechSynthesis.speak(new SpeechSynthesisUtterance('hola hola baba taraaa tatatatatata'));
+      speechSynthesis.speak(new SpeechSynthesisUtterance(tx))
+      console.log('hable??')
+    }
+    boton4.addEventListener("click",hablar2); */
+    //console.log(document.doctype)
+    //console.log(document.URL)
+    //console.log(document.domain)
   </script>
   <!--script src="./promesas/4-conAsyncAwait.js"></script-->
   <!--script src="./promesas/2-conFuncionesEnElThen.js"></script-->
-  <script src="./DOM/estilosyvariables.js"></script>
+  
 </body>
 
 </html>
