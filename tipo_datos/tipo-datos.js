@@ -6,13 +6,8 @@ var numero = 44;
 var buleano = true;
 var nul = null;
 var objetoVacio = {}
-var objetoLleno = {
-    nombre: 'juancho',
-    edad: 7
-};
-var funcion1 = function () {
-    console.log('soy una funcion')
-};
+var objetoLleno = {nombre: 'juancho', edad: 7};
+var funcion1 = function () { console.log('soy una funcion') };
 // tipo Symbol creado con ECMAScript05 es un tipo de dato con valor unico e inmutable(tipo string o undefined)
 // cada vez que se llama a Symbol() se obtiene un identificador único
 const simbolo1 = Symbol();
