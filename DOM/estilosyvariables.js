@@ -2,27 +2,25 @@
 console.log("\x1b[35m%s\x1b[0m", 'Seleccion de Atributos y Estilos: ')
 
 const $titulo = document.querySelector('#tituloId');
-const $formu= document.getElementById('formulario1');
 
-const estiloTitulo = $titulo.style;
-const estiloFormu = $formu.style;
-const estiloTitulo2 = $titulo.getAttribute("style");
-const estiloTitulo3 = window.getComputedStyle($titulo);
-const colorStyle = $titulo.style.color;
+const estilo1 = $titulo.style;
+const estilo2 = $titulo.getAttribute("style");
+const estilo3 = getComputedStyle($titulo);
+//const estilo3 = window.getComputedStyle($titulo); Es lo mismo que lo de arriba
 
 console.log('$titulo: ', $titulo)
-console.log('$formu: ',$formu)
-console.log('$titulo.style: ', estiloTitulo)
-console.log('JSON.stringify($titulo.style): '+JSON.stringify(estiloTitulo))
-console.log('$formu.style: ', estiloFormu)
-console.log('$titulo.getAttribute("style"): ', estiloTitulo2); //me devuelve el $enlace.style.cssText ?
-console.log('window.getComputedStyle("$titulo"): ', estiloTitulo3)
+console.log('$titulo.style: ', estilo1)
+console.log('$titulo.getAttribute("style"): ', estilo2); 
+console.log('window.getComputedStyle("$titulo"): ', estilo3)
+
+const colorStyle = $titulo.style.color;
 console.log('$titulo.style.color: ', colorStyle);
 
 $titulo.style.setProperty("text-decoration", "underline")
 $titulo.style.width = "50%"
+$titulo.style.color = "rgb(100,100,188)"
 
-// Accediendo a variables declaradas en index.css
+// Accediendo a variables declaradas en el .css
 const $html = document.documentElement;
 const $body = document.body;
 

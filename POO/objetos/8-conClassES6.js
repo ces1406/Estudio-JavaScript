@@ -32,4 +32,8 @@ class Person {
 let bob = new Person('Bob');
 console.log('Accediendo al atributo name con bob.name: '+bob.name)
 bob.walk();
+bob.name ='roberto'
+console.log('Despues de modificar bob:',bob)
+bob.walk();
+console.log('Accediendo al atributo name con bob.name: '+bob.name)
 console.log('----------------------------------------')

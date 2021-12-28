@@ -29,6 +29,6 @@ function crearPersona2(nombre, domicilio) {
     return persona;
 }
 var persona2 = crearPersona2('PEDRO', { calle: 'GOYENA', nro: 222 });
-console.log('persona2.nombre : ' + persona2.nombre)
-console.log(persona2.getDomicilio())
-console.log(persona2.getNombre())
+console.log('persona2.nombre : ' + persona2.nombre);
+console.log(persona2.getDomicilio());
+console.log(persona2.getNombre());

@@ -23,13 +23,13 @@ function func1() {
         .then(() => console.log('dentro de func1.then'))
         .catch(err => console.log('ERRORR: ' + err));
 }
-
 function func2(param) {
     console.log('en funcion 2');
     demora(param)
         .then(() => console.log('dentro de func2.then'))
         .catch(err => console.log('ERRORR: ' + err));
 }
+
 const prom1 = new Promise((res, rej) => {
     console.log('\t---->promesa pura (sin funcion creadora)<----')
     let j = 5;

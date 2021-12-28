@@ -1,6 +1,14 @@
 var array1=[99,3,1500,31,1,1,6,777,88,8990];
 var array2=[{name:'juan',edad:11},{name:'jose',edad:22},{name:'coco',edad:77},{name:'maria',edad:66},{name:'marta',edad:3}];
 var persona1 = {name:'jose',edad:22}
+array1[99]= 'soy 99';
+console.log('-->array1[99]: ',array1[99])
+console.log('-->array1[98]: ',array1[98])
+let vec3 = new Array(20)
+console.log('-->vec3: ',vec3)
+console.log('-->vec3[2]: ',vec3[2])
+vec3.fill(55,2,18)
+console.log('-->vec3: ',vec3)
 
 //----------------------------------------for(item of iterable)----------------------------------------------------
 let iterable=[{prop1:'luis',prop2:33},{prop1:'Sandra',prop2:33,prop3:false},{prop1:'Marok',prop3:false}];
@@ -8,11 +16,6 @@ for(item of iterable){
     console.log('item.prop1: '+item.prop1)
 }
 
-//------------------------------------------array.toString()-------------------------------------------------
-console.log("\x1b[35m%s\x1b[0m", '------------------------------------------array.toString()-------------------------------------------------')
-console.log('array2.toString(): '+array2.toString())
-console.log('array2.toLocaleString(): '+array2.toLocaleString())
-console.log('array1.toString(): '+array1.toString())
 //-------------------------------------------array.join()----------------------------------------------------
 console.log("\x1b[35m%s\x1b[0m", '-------------------------------------------array.join()----------------------------------------------------')
 console.log('array2.join("-"): '+array2.join('-'))
@@ -48,9 +51,11 @@ console.log("\x1b[35m%s\x1b[0m", '------------------------------------array.find
 function encontrar (nombre){
     return (
         array2.find((valor,indice,vector)=>{
-            /*console.log('valor: ',valor);
+            /*
+            console.log('valor: ',valor);
             console.log('indice: '+indice);
-            console.log('vector: '+JSON.stringify(vector))*/
+            console.log('vector: '+JSON.stringify(vector))
+            */
             return valor.name === nombre
         }
     ))
@@ -62,7 +67,7 @@ console.log("\x1b[35m%s\x1b[0m", '--------splice(posDondeAgregar,cantElementosAR
 console.log('array2(ANTES DE->splice): ',array2)
 personas = [{name:'Lautardo',edad:30},{name:'Sermgeco',edad:20},{name:'Barado',edad:10}]
 array2.splice(2,1,{name:'Armando',edad:0})
-console.log('array2(LUEGO DE->splice): ',array2)
+console.log('array2(LUEGO DE: array2.splice(2,1,{name:"Armando",edad:0})): ',array2)
 array2.splice(2,0,personas);
 console.log('array2(LUEGO DE->splice(2,0,arrayDepersonas)): ',array2)
 //-----------------------------var unArray = array.concat(arra1,arra2,.....)-------------------------------
@@ -70,31 +75,30 @@ console.log("\x1b[35m%s\x1b[0m", '-----------------------------var unArray = arr
 var unArray = array2.concat([{name:'zaaaa',edad:1},{name:'zbbbbb',edad:2}],[{name:'Zaaaa',edad:3},{name:'Zbbbbb',edad:3}],[{name:'Yzaaaa',edad:5},{name:'Yzbbbbb',edad:5}])
 console.log('unArray: ',unArray)
 //------------------------------var unArray = array.slice(posInicio,posFinal)------------------------------
-console.log("\x1b[35m%s\x1b[0m", '-----------------------------var unArray = array.slice(posInicio,posFinal)-------------------------------')
+console.log("\x1b[35m%s\x1b[0m", '-----------------------------var unArray = array.slice(posInicio,posFinal)-------------------------------');
+console.log('array2: ',array2);
 let array3 = array2.slice();
-console.log('array3 = array2.slice() : ',array3)
-console.log('array2.slice(1,3): ',array2.slice(1,3))
-console.log('array2(LUEGO DE->splice(2,1)): ',array2)
-
+console.log('array3 = array2.slice() : ',array3);
+console.log('array2.slice(1,3): ',array2.slice(1,3));
+console.log('array2(LUEGO DE->splice(2,1)): ',array2);
 
 //-------------------------------------------array.reverse()-----------------------------------------------
-console.log("\x1b[35m%s\x1b[0m", '--------------------------------unArray = array.reverse()-----------------------------------------------')
-console.log('array1: '+JSON.stringify(array1))
-console.log('array1.reverse(): '+JSON.stringify(array1.reverse()))
-console.log('array2: '+JSON.stringify(array2))
-console.log('array2.reverse(): '+JSON.stringify(array2.reverse()))
+console.log("\x1b[35m%s\x1b[0m", '--------------------------------unArray = array.reverse()-----------------------------------------------');
+console.log('array1: '+JSON.stringify(array1));
+console.log('array1.reverse(): '+JSON.stringify(array1.reverse()));
+console.log('array2: '+JSON.stringify(array2));
+console.log('array2.reverse(): '+JSON.stringify(array2.reverse()));
 //---------------------------------------array.sort()---ORDEN ALFABETICO-----------------------------------
-console.log("\x1b[35m%s\x1b[0m", '---------------------------------------array.sort()---ORDEN ALFABETICO-----------------------------------')
+console.log("\x1b[35m%s\x1b[0m", '---------------------------------------array.sort()---ORDEN ALFABETICO-----------------------------------');
 //console.log('array1: ',array1)
-console.log('array1.sort(): '+JSON.stringify(array1.sort()))
+console.log('array1.sort(): '+JSON.stringify(array1.sort()));
 //--------------------------array.sort(FUNCION DE COMPARACION ENTRE 2 ELEMENTOS)---------------------------
-console.log("\x1b[35m%s\x1b[0m", '-------------------------array.sort(FUNCION DE COMPARACION ENTRE 2 ELEMENTOS)---------------------------')
-console.log('array1.sort(): '+JSON.stringify(array1.sort((a,b)=>{return a-b})))
+console.log("\x1b[35m%s\x1b[0m", '-------------------------array.sort(FUNCION DE COMPARACION ENTRE 2 ELEMENTOS)---------------------------');
+console.log('array1.sort(): '+JSON.stringify(array1.sort((a,b)=>{return a-b})));
 //NOTA: la funcion de comparacion debe devolver: 0-->iguales NroPositivo-->a>b NroNegativo-->a<b
-console.log('array2(antes de ordenar): ',array2)
-array2.sort((a,b)=>a.edad-b.edad)
-console.log('array2(despues de ordernar): ',array2)
-
+console.log('array2(antes de ordenar): ',array2);
+array2.sort((a,b)=>a.edad-b.edad);
+console.log('array2(despues de ordernar): ',array2);
 
 
 //-----------------------------------------array.foreach(Funcion)------------------------------------------
@@ -154,3 +158,17 @@ arrayReducidoAUnElemento = array2.reduce((acumulador,valorActual,indice,valorIni
     return {name:acumulador.name,edad:valorActual.edad+acumulador.edad,rol:acumulador.rol}
 })
 console.log('arrayReducidoAUnElemento: ',arrayReducidoAUnElemento)
+
+
+//-----------------------------------------iteraciones de un array------------------------------------------
+console.log("\x1b[35m%s\x1b[0m", '-----------------------------------------iteraciones de un array------------------------------------------');
+console.log("array2: ",array2)
+for (const key in array2) {
+    console.log('key in array2-->', key)
+}
+for (const iterator of array2) {
+    console.log('iterator of array2-->',iterator)
+}
+for (const key in persona1) {
+    console.log('key in persona1-->', key)
+}

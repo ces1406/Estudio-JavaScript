@@ -13,6 +13,10 @@ var [var12,,var13] =animales;
 console.log('var12->',var12);
 console.log('var13->',var13);
 console.log('-------------');
+var [var14,...var15] =animales;
+console.log('var14->',var14);
+console.log('var15->',var15);
+console.log('-------------');
 
 // Destructuring en objetos:
 const objeto1 ={ a:'casa', b:'departamento', c:'choza' };

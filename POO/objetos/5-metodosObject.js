@@ -3,6 +3,7 @@ console.log("\x1b[36m%s\x1b[0m", '\nOBJETOS:\n' + '-----------------------------
 // Forma 7: usando Object.defineProperty() para definir propiedades
 console.log("\x1b[36m%s\x1b[0m", 'Usando Object.defineProperty() para asignarle atributos')
 console.log("\x1b[36m%s\x1b[0m", '   para definir cada propiedad (atributos y no para metodos?)')
+
 var persona1 = {}; // o var personaH = new Object()
 Object.defineProperty(persona1, 'nombre', { value: 'JUAN', writable: true, enumerable: true, configurable: true });
 Object.defineProperty(persona1, 'domicilio', { value: { calle: 'ALSINA', nro: 111 }, writable: true, enumerable: true, configurable: true });

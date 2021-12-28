@@ -7,148 +7,141 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Documento html de prueba para javascript</title>
   <link rel="stylesheet" href="index.css" type="text/css" media="screen" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-  <script src="./DOM/estilosyvariables.js" defer="defer"></script>
+  <!--script src="./DOM/estilosyvariables.js" defer="defer"></script-->
+  <script src="./DOM/eventos.js" defer="defer"></script>
+  <script src="./DOM/insertar-nodos.js" defer="defer"></script>
 </head>
 
-<body style="background-color: #0B201F;">
+<body>
 
   <header>
+
     <div class="container" id="tituloId">
       <h1>Titulo de la página</h1>
     </div>
-    <div class="container" id="idSectores">
-      <div class="sector">
-        <h4>Sector A</h4>
-      </div>      
-      <div class="sector">
-        <h4>Sector B</h4>
-      </div>
-      <div class="sector">
-        <h4>Sector C</h4>
-      </div>
-    </div>  
-    <div>
-    <button onclick="console.log('me hicieron click')">Evento mediante atributo(on line)</button><br/>
-    <button onclick="botonPresionado1()">Evento mediante atributo(en archivo externo)</button><br/>
-    <button id="idBotonSemantico">Evento con manejador semantico</button><br/>
-    <button id="idBoton4">Evento multiples manejadores</button><br/>
-    <br/>
-    <br/>
+
+    <div id="idBotonesHeader">
+      <h2>Botones</h2>
+      <button onclick="console.log('me hicieron click')" type="button">Evento mediante atributo(on line)</button><br />
+      <button onclick="botonPresionado1()">Evento mediante atributo(en archivo externo)</button><br />
+      <button id="idBotonSemantico">Evento con manejador semantico</button><br />
+      <button id="idBoton4">Evento multiples manejadores</button><br />
+    </div>
+
     <section class="eventos-flujo">
-     <div class="flujo-eventos" id="idDivPropagacion1">
-        1
-        <div class="flujo-eventos" id="idDivPropagacion2">
-          2
-          <div class="flujo-eventos" id="idDivPropagacion3">
-            3<br/><br/>
-            <divbutton id="idBtn">Evento multiples manejadores</button><br/>
+      <h2>Prueba flujo de eventos</h2>
+      <div class="flujo-eventos" id="idDivPropagacion1"> div id="idDivPropagacion1"
+        <div class="flujo-eventos" id="idDivPropagacion2"> div id="idivPropagacion2"
+          <div class="flujo-eventos" id="idDivPropagacion3"> div id="idDivPropagacion3"
+            <button id="idBtn">Evento multiples manejadores</button>
           </div>
         </div>
-      </div>    
+      </div>
     </section>
-    </div>
-  </header>  
-  <div style="background-color: rgb(255,0,0);">255,0,0</div>
+
+  </header>
+
   <div id="paleta"></div>
-  
-  <section>
-    <form action="http://localhost:5000/upload" class="elemento" id="formulario1" method="POST">
-      <h3>Formulario 1</h3>
-      <fieldset class="elemento" id="personalDataId" style="padding:1ex 2ex 2ex 2ex;">
-        <legend>Datos Personales</legend>
-        Nombre<input type="text" name="nombre"/><br/>
-        Apellido<input type="text" name="apellido"/><br/>
-        Edad<input type="number" name="edad"/>
-      </fieldset>
-      <fieldset class="elemento">
-        <legend>Domicilio</legend>
-        Calle<input type="text" name="calle"/><br/>
-        Nro<input type="number" name="numero"/>
-      </fieldset>
-      <input type="submit" value="Submitear"></input>
-    </form>
-  </section>
 
-  <section class="container" id="listas">
-    <div >
-      <h5 class="elemento">Lista 1</h5>
-      <ul class="elemento" id="lista1">
-        <li>Item A</li>
-        <li>Item B</li>
-        <li>Item C</li>
-        <li>Item D</li>
-      </ul>
-    </div>
-    <div >
-      <h5 class="elemento">Lista 2</h5>
-      <ul class="elemento" id ="lista2">
-        <li><a>Link 1</a></li>
-        <li><a>Link 2</a></li>
-        <li><a>Link 3</a></li>
-      </ul>
-    </div>
-    <div class="item" >
-      <h5 class="elemento">Lista 3</h5>
-      <ul class="elemento" id="lista3">
-        <li><a>Link 1</a></li>
-        <li><a>Link 2</a></li>
-        <li><a>Link 3</a></li>
-        <li><a>Link 4</a></li>
-      </ul>
-    </div>
-  </section>
+  <main>
 
-  <aside>
-    <div>
-      <table class="elemento" id="tabla1">
-        <tr>
-          <td>Columna 1</td>
-          <td>Columna 2</td>
-          <td>Columna 3</td>
-        </tr>
-        <tr>
-          <td>Data11</td>
-          <td>Data12</td>
-          <td>Data13</td>
-        </tr>
-        <tr>
-          <td>Data21</td>
-          <td>Data22</td>
-          <td>Data23</td>
-        </tr>
-      </table>
-    </div>
-  </aside>
+    <section id="insertanodo">
+      <button id="btnInserta1">Agregar con append</button>
+      <button id="btnInserta2">Agregar con appendChild</button>
+      <button id="btnInserta3">Agregar con insertAdjacentHTML</button>
+      <button id="btnInserta4">Agregar con innerHTML</button>
+    </section>
+
+    <section id="idSeccionFormulario">
+      <form action="http://localhost:5000/upload" class="elemento" id="formulario1" method="POST">
+        <h3>Formulario 1</h3>
+        <fieldset class="elemento" id="personalDataId" style="padding:1ex 2ex 2ex 2ex;">
+          <legend>Datos Personales</legend>
+          Nombre<input type="text" name="nombre" /><br />
+          Apellido<input type="text" name="apellido" /><br />
+          Edad<input type="number" name="edad" />
+        </fieldset>
+        <fieldset class="elemento">
+          <legend>Domicilio</legend>
+          Calle<input type="text" name="calle" /><br />
+          Nro<input type="number" name="numero" />
+        </fieldset>
+        <input type="submit" value="Submitear"></input>
+      </form>
+    </section>
+
+    <section class="container-tabla" id="listas">
+      <h2>Listas</h2>
+      <div>
+        <h5 class="elemento">Lista 1</h5>
+        <ul class="elemento" id="lista1">
+          <li>Item A</li>
+          <li>Item B</li>
+          <li>Item C</li>
+          <li>Item D</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="elemento">Lista 2</h5>
+        <ul class="elemento" id="lista2">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+        </ul>
+      </div>
+      <div class="item">
+        <h5 class="elemento">Lista 3</h5>
+        <ul class="elemento" id="lista3">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+          <li><a>Link 4</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <aside id="idTablasSection">
+      <h2>Tabla</h2>
+      <div>
+        <table class="elemento" id="tabla1" style="border: solid 1px;">
+          <thead>
+            <tr>
+              <th style="border: solid 1px;">Columna 1</th>
+              <th style="border: solid 1px;">Columna 2</th>
+              <th style="border: solid 1px;">Columna 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: solid 1px;">Data11</td>
+              <td style="border: solid 1px;">Data12</td>
+              <td style="border: solid 1px;">Data13</td>
+            </tr>
+            <tr>
+              <td style="border: solid 1px;">Data21</td>
+              <td style="border: solid 1px;">Data22</td>
+              <td style="border: solid 1px;">Data23</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </aside>
+
+  </main>
 
   <footer class="elemento container">
-    <div class="card-group">
-      <div class="card">
-        <img class="card-img-top" src="./imgs/hermes.jpg" width="150" height="350"/>
-        <div class="card-body">
-          <h4 class="card-title">Titulo</h4>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-          </p>
-        </div>
-        <div class="card-footer">
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="./imgs/gattt.jpeg" width="150" height="350" />
-        <div class="card-body">
-          <h4 class="card-title">Otro titulo</h4>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-          </p>
-        </div>
-        <div class="card-footer">
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </div>
+
+    <div class="card">
+      <img class="card-img-top" src="./imgs/hermes.jpg" width="150" height="350" />
+    </div>
+
+    <div class="card">
+      <img class="card-img-top" src="./imgs/gattt.jpeg" width="150" height="350" />
+      <div class="card-body">
+        <h4 class="card-title">Titulo</h4>
+        <p class="card-text">
+          This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+        </p>
       </div>
     </div>
   </footer>
@@ -176,7 +169,7 @@
   </script>
   <!--script src="./promesas/4-conAsyncAwait.js"></script-->
   <!--script src="./promesas/2-conFuncionesEnElThen.js"></script-->
-  
+
 </body>
 
 </html>

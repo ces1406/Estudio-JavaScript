@@ -51,19 +51,6 @@ var octal1 = 020
 var octal2 = 003
 console.log("hexadecimales: octal1+octal2 = "+octal1+octal2+ "  (el resultado lo imprime como una union de strings)")
 
-//----------------------Strings-------------------------
-console.log("cadena1.length:",cadena1.length);
-console.log('cadena1.concat(" completa") : ' + cadena1.concat(" completa"));
-console.log('cadena1 : ' + cadena1);
-console.log('cadena1.indexOf("de") : ' + cadena1.indexOf('de'));
-console.log('cadena1.charAt(8) : ' + cadena1.charAt(8));
-console.log('cadena1.substring(2,5) : ' + cadena1.substring(2,5));
-console.log('cadena1.localeCompare("aaaaa") : ' + cadena1.localeCompare('zaaaa'));
-var cadena11 = cadena1.slice(2,5)
-console.log('cadena1.slice(2,5): '+cadena11)
-var vecStrings = cadena1.split(' ');
-console.log('vector->cadena1.split(" "): ',vecStrings)
-
 //---------------------Undefined-----------------------
 var a;
 if(a===undefined){ console.log('var a; --->es undefined 1')}

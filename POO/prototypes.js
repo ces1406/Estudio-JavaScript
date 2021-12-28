@@ -1,9 +1,7 @@
 // Agregando metodos y atributos en el prototipo
 function Persona1(nomb) {
     this.nombre = nomb;
-    this.adorna = function(){
-        console.log('->'+this.nombre+'<-')
-    }
+    this.adorna = function(){ console.log('->'+this.nombre+'<-') }
 }
 Persona1.prototype.descripcion = function () { return 'Descripcion-->' + this.nombre }
 Persona1.prototype.edad = 55;
@@ -28,14 +26,11 @@ profA.adorna()
 // Viendo los prototipos cuando no hay constructor 
 var objeto1 = {
     prop2: 'algo',
-    prop3: {
-        subProp1: 0,
-    },
+    prop3: { subProp1: 0 },
     prop4: function () { return this.prop2; },
 };
-console.log(objeto1.prop4())
-
-console.log("\x1b[36m%s\x1b[0m", '-----------------------------------------')
+console.log(objeto1.prop4());
+console.log("\x1b[36m%s\x1b[0m", '-----------------------------------------');
 
 // viendo el tema de  ...= variable || {objeto}
 console.log("\x1b[36m%s\x1b[0m", '4-Miembros protegidos (que sean visibles solo para los herederos)');
@@ -69,3 +64,74 @@ var hijo3 = new ConstructorHijo1('juancito',334,'algo protegido','basquet');
 hijo3.deportar();
 hijo3.saluda();
 console.log('hijo3 ',hijo3)
+
+console.log("\x1b[36m%s\x1b[0m", '-----------------------------------------')
+console.log("\x1b[36m%s\x1b[0m", '-Probando prototypes');
+
+// LA CLASE PADRE
+function Persona(n,e,s){
+    this.nombre=n;
+    this.edad=e;
+    this.sexo=s;
+    this.setNombre = function(n){ this.nombre=n};
+    this.setEdad = function(e){this.edad=e}
+    this.setSexo = function(s){this.sexo=s}
+    this.cumpliranios = function(){++this.edad;}
+    this.presentar = function(){ console.log('Soy '+this.nombre+' tengo '+this.edad+' años ('+this.sexo+')')}
+}
+let p1 = new Persona('cesar',44,'m');
+p1.cumpliranios();
+p1.presentar()
+
+// LA CLASE HIJO
+function Trabajador (p,s){
+    this.puesto=p;
+    this.sueldo=s;
+    this.ahorros = 0;
+    this.cometa=function(d){ this.ahorros += d; }
+    this.cobrar=function(){this.ahorros+=this.sueldo}
+    this.saldo= function(){console.log('Tengo ahorrados '+this.ahorros+'$')}
+}
+Trabajador.prototype = new Persona();//Forma1: pero sin hacer un seteo de propiedades en la construccion sino q despues las seteo aparte
+
+let t1 = new Trabajador('administrativo',500);
+t1.cobrar()
+t1.saldo()
+t1.cometa(100)
+t1.saldo()
+//t1.setNombre('juan carlos')
+//t1.setEdad(88)
+//t1.setSexo('f')
+t1.presentar()
+console.log('t1: ',t1)
+console.log("\x1b[36m%s\x1b[0m", '-----------------------------------------')
+
+// LA CLASE HIJO
+function Trabajador2 (p,s,n,e,sx){
+    this.puesto=p;
+    this.sueldo=s;
+    this.ahorros = 0;
+    this.Persona = Persona;
+    this.Persona(n,e,sx);
+    this.cometa=function(d){ this.ahorros += d; }
+    this.cobrar=function(){this.ahorros+=this.sueldo}
+    this.saldo= function(){console.log('Tengo ahorrados '+this.ahorros+'$')}
+}
+Trabajador2.prototype = new Persona();//Forma1: pero sin hacer un seteo de propiedades en la construccion sino q despues las seteo aparte
+
+let t2 = new Trabajador2('operario',200,'juan carlos',24,'f');
+t2.cobrar()
+t2.saldo()
+t2.cometa(100)
+t2.saldo()
+t2.presentar()
+console.log('t2: ',t2);
+
+var uno ="una var uno";
+let dos=" un let dos"
+const tres ="un const tres"
+console.log('t2.isPrototypeOf(Persona)-> ',Persona.prototype.isPrototypeOf(t2))
+console.log('t1.isPrototypeOf(Persona)-> ',t1.isPrototypeOf(p1))
+console.log('t2.prototype-> ',t2.prototype)
+console.log('t2.__proto__-> ',t2.__proto__)
+console.log('t1.prototype-> ',t1.__proto__)

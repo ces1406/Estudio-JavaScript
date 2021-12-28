@@ -6,6 +6,7 @@ function botonPresionado1() {
     console.log(event); //event->está deprecado
 }
 
+
 //2-Con manejador semántico:
 const $btn1 = document.getElementById("idBotonSemantico");
 //$btn1.onclick = botonPresionado1;
@@ -15,16 +16,15 @@ $btn1.onclick = (e) => {
     console.log('evento con e:',e)
     console.log('evento con event',event); //event->está deprecado
 }
-// Desventajas:
-// 1)solo se ejecuta una sola y única funcion
-// 2)no se puede remover el manejador del evento
-// 3)la  funcion  NO puede recibir parametros. La  única  opcion  es 
-//  un  solo y que representa al evento (aunque tampoco es necesario 
-//  porque se la puede invocar mediante la palabra reservada "event")
+    /*  Desventajas:
+        1) Solo se ejecuta una sola y única funcion
+        2) No se puede remover el manejador del evento
+        3) La  funcion  NO puede recibir parametros. La  única  opcion  es un  solo y que representa al  
+            evento (aunque tampoco es necesario porque se la puede invocar mediante la palabra reservada "event")
+    */
 
 //3-Con Manejadores múltiples -> EventListeners:
 const $btn2 = document.getElementById("idBoton4");
-
 $btn2.addEventListener("click", botonPresionado1);
 $btn2.addEventListener("click", (e) => {
     alert("holisss tambien");
@@ -33,6 +33,7 @@ $btn2.addEventListener("click", (e) => {
     console.log(e.type);
     console.log(e.target)
 });
+
 
 //4-Pasando parametros al manejador (Capitulo 73 #jonmircha: EVENTOS)
 function saludar(nomb='vacio'){
@@ -44,12 +45,11 @@ function saludar(nomb='vacio'){
     */
 }
 $btn2.addEventListener('click',()=>saludar(' Mr. Putin'))
-/* Nota: lo de arriba es el truco para permitir uso de parametros, agregar un nivel mas de 
-         ejecución
-*/
+/* Nota: lo de arriba es el truco para permitir uso de parametros, agregar un nivel mas de ejecución */
 $btn2.addEventListener("click",saludar)
 //Removiendo el manejador: (no se pueden remover los definidos como arrow functions)
 $btn2.removeEventListener('click',saludar)
+
 
 //5-Flujo de eventos:
 //const $divsEventos = document.getElementsByClassName("flujo-eventos")

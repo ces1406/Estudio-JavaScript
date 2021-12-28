@@ -1,43 +1,61 @@
-* {
-    border-color: rgb(236, 235, 179)!important;
-    border-width: 1px;
-    border-style: solid;
-    margin: 1ex 1ex 1ex 1ex;
-    padding: 1ex 1ex 1ex 1ex;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    font-family: 'Nunito', sans-serif;
 }
+
 :root{ /*etiqueta root (??)*/
     --amarillo1:#F7DF1E; /*declarando una variable amarillo1*/    
     --oscuro1: #222;
 }
-#titulo{
-    color: rgb(251, 250, 238);    
-}
-.container{
-    color: rgb(210, 220, 218);      
-    display: flex;
-}
-.elemento{
-    color: rgb(201, 220, 218);  
-}
-#personalDataId{
-    background-color: rgb(25, 48, 49);
-    color: rgb(255, 224, 122);
-}
-.claseExtra{
-    background-color: rgb(27, 33, 41);
-}
-.eventos-flujo div{
-    padding:2em;
-    font-size:1.2rem;
-    text-align:center;
-}
 
+#idBotonesHeader{
+    border: solid 1px black;
+    padding: 2em;
+    margin: 1rem;
+}
+button, input[type="submit"]{
+    background-color:rgb(212, 218, 221);
+    border: solid 1px darkslategrey;
+    padding: 0.4em;
+    margin: 0.2rem;
+    border-radius: 0.3rem;
+}
+.eventos-flujo{
+    border: solid 1px darkslategrey;
+    padding: 0.4em;
+    margin: 0.2rem;
+    width: 85%;
+}
 #idDivPropagacion1{
-    background-color: yellow;
+    background-color: rgb(199, 158, 83);
+    padding: 4em;
 }
 #idDivPropagacion2{
-    background-color: gold;
-}
+    padding: 2em;
+    background-color: rgb(221, 192, 130);
+    }
 #idDivPropagacion3{
-    background-color: lightyellow;
+    padding: 1em;
+    background-color: rgb(250, 227, 179);
+}
+#idSeccionFormulario{
+    border: solid 1px darkslategrey;
+    padding: 2em;
+    margin: 2rem;
+}
+#idSeccionFormulario *{
+    padding: 0.4em;
+    margin: 0.2rem;
+}
+#listas{
+    border: solid 1px darkslategrey;
+    padding: 2em;
+    margin: 2rem;
+}
+#idTablasSection{
+    border: solid 1px darkslategrey;
+    padding: 2em;
+    margin: 2rem;
 }
