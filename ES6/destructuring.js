@@ -37,7 +37,7 @@ adornar1()
 console.log('-------------')
 
 // Funcion con parametro por defecto:
-function adornar2(param='vacio'){
+function adornar2 (param = 'vacio') {
     console.log('hola2->'+param+'<-')
 }
 adornar2('luli')

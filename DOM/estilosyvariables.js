@@ -10,7 +10,7 @@ const estilo3 = getComputedStyle($titulo);
 
 console.log('$titulo: ', $titulo)
 console.log('$titulo.style: ', estilo1)
-console.log('$titulo.getAttribute("style"): ', estilo2); 
+console.log('$titulo.getAttribute("style"): ', estilo2); //da null por que no es en sí un atributo de la etiqueta
 console.log('window.getComputedStyle("$titulo"): ', estilo3)
 
 const colorStyle = $titulo.style.color;

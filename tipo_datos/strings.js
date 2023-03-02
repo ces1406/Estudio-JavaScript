@@ -22,4 +22,5 @@ var vecStrings = cadena1.split(' ');
 console.log('\nvector->cadena1.split(" "): ',vecStrings);
 
 console.log('vector: ',vector);
-console.log('vector.toString(): ',vector.toString())
+var vecTo = vector.toString();
+console.log('vector.toString(): ',vecTo)

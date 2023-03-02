@@ -1,6 +1,6 @@
 // Prueba corta de "Iterable":
 const iterableA = [1,{name:'juancho',edad:44},2,3,4,5];
-const iteradorA = iterableA[Symbol.iterator]();
+const iteradorA = iterableA[ Symbol.iterator ] ();
 console.log('iteradorA.next(): ',iteradorA.next())
 console.log('iteradorA.next(): ',iteradorA.next())
 console.log('iteradorA.next(): ',iteradorA.next())

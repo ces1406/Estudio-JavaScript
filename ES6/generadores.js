@@ -16,3 +16,22 @@ console.log(iterador.next())
 console.log(iterador.next())
 console.log(iterador.next())
 console.log(iterador.next())
+
+function* pasoapaso(v){
+    let x=v+1;
+    yield x;
+    ++x;
+    yield x;
+    ++x;
+    yield x;
+    ++x;
+    yield x;
+    ++x;
+    yield x;
+} 
+
+let paso = pasoapaso(0);
+console.log(paso.next().value)
+console.log(paso.next().value)
+console.log(paso.next().value)
+console.log(paso.next().value)

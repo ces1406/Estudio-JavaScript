@@ -8,7 +8,7 @@ function scope1 (){
         console.log('value1: '+value1)
     }
     console.log("Fuera del for->value: "+value1);
-    // o sea que value está disponible a un scope superior?
+    // o sea que value está disponible a un scope superior? RTA: Sí, porque var tiene alcance de funcion
     // (o en realidad "for" no está determinando ningun scope)
 };
 scope1();
@@ -19,7 +19,7 @@ function scope2 (){
         let value2 = a2[i2];        
         console.log('value2: '+value2)
     }
-    //console.log("Fuera del for->value: "+value ) // -->ahora da ERROR
+    //console.log("Fuera del for->value: "+value ) // -->ahora da ERROR RTA: Sí, porque let tiene alcance de bloque
 };
 scope2();
 
@@ -40,3 +40,13 @@ scope3();
 
 //console.log("Fuera del todo -> a1: " + a1); //--> da ERROR
 //console.log("Fuera del todo -> value1: " + value1); //--> da ERROR
+
+var nombre ='susana';
+function printStudent(nombre){
+    nombre = nombre.toUpperCase();
+    console.log(nombre)
+}
+
+printStudent(nombre);
+printStudent('juan');
+console.log(nombre);
