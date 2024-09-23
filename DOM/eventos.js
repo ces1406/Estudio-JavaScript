@@ -1,9 +1,10 @@
 // Capitulo 72 #jonmircha: EVENTOS
 
 //1-Como un atributo html que invoca a la siguiente function:
-function botonPresionado1() {
+function botonPresionado1(e) {
     alert("me apretaste");
-    console.log(event); //event->está deprecado
+    console.log('event:',event); //event->está deprecado
+    console.log('e:',e)
 }
 
 

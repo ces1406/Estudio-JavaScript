@@ -9,7 +9,8 @@ console.log("var unValor = function(){return 3+2}()\nunValor= " + unValor + "\n"
 
 // Mediante IIFE
 console.log("\x1b[36m%s\x1b[0m", 'Construccion de objetos con variables privadas usando IIEF (inmediatly invoked function expression)')
-var Persona1 = (function () { //Persona1 termina siendo un constructor (?:un constructor no podria pisarse)
+var Persona1 = (function () { 
+    // Persona1 termina siendo un constructor (?:un constructor no podria pisarse)
     // variables locales a la funcion para que sean privadas para el constructor
     var nombre = 'sin Nombre';
     var domicilio = {};
@@ -56,7 +57,7 @@ mapaDebil.set({ name: 'cosa' }, { cadena: 'bla bla bla', cantidad: 411 });
 console.log('mapadebil.get("clave loca"): ' + mapaDebil.get(ojeto1));
 console.log('mapadebil.get({name:"cosa"}): ' + mapaDebil.get({ name: 'cosa' }))
 
-console.log('----------------------------------------')
+console.log('----------------------------------------');
 var Persona2 = (function () { //Persona2 termina siendo un constructor
     var variablesPrivadas = new WeakMap();
 
@@ -73,7 +74,7 @@ var Persona2 = (function () { //Persona2 termina siendo un constructor
         this.getNombre = () => { return 'Nombre: ' + variablesPrivadas.get(this).nombre };
     }
     return constructorPersona
-}())
+}());
 var personaP = new Persona2('Potamo', 'alcortacot', 455);
 console.log("\x1b[36m%s\x1b[0m", 'Construccion de objetos con variables privadas usando IIEF + weakmap()-> de ES6)')
 console.log('personaP.nombre : ' + personaP.nombre + "\x1b[31m%s\x1b[0m", ' (se puede ver como no existe "personaN.nombre", el atributo nombre no es adherido al objeto)')

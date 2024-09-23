@@ -6,7 +6,7 @@ const animal = {
     alimento2() { console.log('dieta: ' + this.dieta) },                // no da error    
     alimento3: function () { console.log('dieta: ' + this.dieta) },     // no da error --> segun muchos libros tendría que dar undefined   
     //function alimento4 () { console.log('dieta:'+this.dieta)},        //--->definicion erronea (no se puede definir así)
-    cumple: () => { console.log('come: ' + dieta) },                    // da error tambien aunque sea una arrow function    
+    cumple: () => { console.log('come: ' + dieta) },                    // provoca Error    
     cumple2: () => { console.log('come: ' + this.dieta) }               // da "undefined"
 }
 console.log('-----------------------------')

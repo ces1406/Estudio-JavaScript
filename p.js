@@ -30,3 +30,6 @@ function p(input) {
     return rta;
 } 
 console.log(p('C;M;coffee machine'));
+
+let a="(c(oder)) b(yte)"
+console.log("a->",a.split(/\(|\)/))
